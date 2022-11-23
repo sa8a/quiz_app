@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/constants/styles.dart';
 
 // クイズ画面
 class QuizPage extends StatelessWidget {
@@ -17,12 +18,7 @@ class QuizPage extends StatelessWidget {
               children: const [
                 Text(
                   'クイズ内容が入ります。クイズ内容が入ります。クイズ内容が入ります。',
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 3.0,
-                  ),
+                  style: textStyle,
                 ),
                 SizedBox(height: 80),
               ],
@@ -40,13 +36,7 @@ class QuizPage extends StatelessWidget {
                         backgroundColor: Colors.blue[400],
                       ),
                       onPressed: () {},
-                      child: const Text(
-                        '○',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: const Text('○', style: quizButtonTextStyle),
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -58,13 +48,7 @@ class QuizPage extends StatelessWidget {
                         backgroundColor: Colors.red[400],
                       ),
                       onPressed: () {},
-                      child: const Text(
-                        '×',
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      child: const Text('×', style: quizButtonTextStyle),
                     ),
                   ),
                 ],
