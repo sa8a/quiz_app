@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/screens/quiz_page.dart';
 
 // 起動画面
 class StartPage extends StatelessWidget {
@@ -12,8 +13,16 @@ class StartPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('簡単なクイズアプリです。'),
-            const Text('○か×を選択するだけ！'),
+            const Text(
+              '簡単なクイズアプリです。\n ○か×を選択するだけ！\n（全3問）',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3.0,
+              ),
+            ),
             const SizedBox(height: 30),
             SizedBox(
               width: 180,
@@ -22,7 +31,12 @@ class StartPage extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const QuizPage()),
+                  );
+                },
                 child: const Text('スタート！'),
               ),
             )
