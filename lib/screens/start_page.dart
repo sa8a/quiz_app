@@ -15,7 +15,7 @@ class StartPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              '簡単なクイズアプリです。\n ○か×を選択するだけ！\n（全3問）',
+              '簡単なクイズアプリです。\n ○か×を選択するだけ！\n（全5問）',
               textAlign: TextAlign.center,
               style: textStyle,
             ),
