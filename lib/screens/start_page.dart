@@ -27,7 +27,7 @@ class StartPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const QuizPage()),
+                    MaterialPageRoute(builder: (context) => QuizPage()),
                   );
                 },
                 child: const Text('スタート！'),

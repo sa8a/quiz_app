@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/constants/styles.dart';
+import 'package:quiz_app/model/quiz.dart';
 
 // クイズ画面
 class QuizPage extends StatelessWidget {
-  const QuizPage({super.key});
+  QuizPage({super.key});
+
+  // インスタンスを生成（new は書かなくてよい）
+  // ※変数名の前にある「QuizFunction」はまだ理解できていない
+  QuizFunction quizFunction = QuizFunction();
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +20,13 @@ class QuizPage extends StatelessWidget {
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
-                  'クイズ内容が入ります。クイズ内容が入ります。クイズ内容が入ります。',
+                  // クイズ内容を表示
+                  quizFunction.getQuestionText(),
                   style: textStyle,
                 ),
-                SizedBox(height: 80),
+                const SizedBox(height: 80),
               ],
             ),
             Align(
