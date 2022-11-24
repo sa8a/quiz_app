@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/constants/styles.dart';
-import 'package:quiz_app/screens/quiz_page.dart';
+import 'package:quiz_app/screens/start_page.dart';
 
-// 起動画面
-class StartPage extends StatelessWidget {
-  const StartPage({super.key});
+class ResultPage extends StatelessWidget {
+  const ResultPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('easyクイズアプリ'),
+        title: const Text('結果'),
 
         // デフォルトの戻るボタンを非表示
         automaticallyImplyLeading: false,
@@ -20,7 +19,7 @@ class StartPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              '簡単なクイズアプリです。\n ○か×を選択するだけ！\n（全5問）',
+              '結果を表示',
               textAlign: TextAlign.center,
               style: textStyle,
             ),
@@ -32,12 +31,12 @@ class StartPage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => QuizPage()),
+                    MaterialPageRoute(builder: (context) => const StartPage()),
                   );
                 },
-                child: const Text('スタート！'),
+                child: const Text('最初に戻る'),
               ),
-            )
+            ),
           ],
         ),
       ),

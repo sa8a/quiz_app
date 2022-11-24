@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/constants/styles.dart';
 import 'package:quiz_app/model/quiz.dart';
+import 'package:quiz_app/screens/result_page.dart';
 
 // クイズ画面
 class QuizPage extends StatefulWidget {
@@ -34,6 +35,10 @@ class _QuizPageState extends State<QuizPage> {
 
         // 解答の配列を初期化
         quizScore = [];
+
+        // 結果画面に遷移
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ResultPage()));
       } else {
         // クイズが残っている場合
 
