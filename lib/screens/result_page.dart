@@ -23,12 +23,13 @@ class ResultPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              '結果を表示',
+              'おしまい！',
               textAlign: TextAlign.center,
               style: textStyle,
             ),
             const SizedBox(height: 30),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: result,
             ),
             const SizedBox(height: 30),

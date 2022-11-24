@@ -30,6 +30,39 @@ class _QuizPageState extends State<QuizPage> {
       if (quizFunction.isFinished()) {
         // クイズが残っていない場合
 
+        // 押したボタンと答えが正しいかを確認してスコア配列へ追加
+        if (getAnswer == corrctAnswer) {
+          // print('正解');
+          quizScore.add(
+            Container(
+              child: Row(
+                children: [
+                  Text('問${(quizScore.length + 1).toString()}'),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
+            ),
+          );
+        } else {
+          // print('不正解');
+          quizScore.add(
+            Container(
+              child: Row(
+                children: [
+                  Text('問${(quizScore.length + 1).toString()}'),
+                  const Icon(
+                    Icons.close,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+
         // クイズ内容を最初に戻す
         quizFunction.resetQuestion();
 
