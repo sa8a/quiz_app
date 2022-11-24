@@ -3,8 +3,10 @@ import 'package:quiz_app/constants/styles.dart';
 import 'package:quiz_app/screens/start_page.dart';
 
 class ResultPage extends StatelessWidget {
+  // クイズ画面（画面遷移元）からのデータを受け取る変数
   final List<Container> result;
 
+  // コンストラクタ
   const ResultPage({super.key, required this.result});
 
   @override
