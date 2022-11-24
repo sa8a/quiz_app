@@ -41,6 +41,7 @@ class _QuizPageState extends State<QuizPage> {
 
         // 解答の配列を初期化
         // quizScore = [];
+        // 最初の画面に戻ってクイズする際に、quizScore変数で空の配列作るからいらなかった
       } else {
         // クイズが残っている場合
 
