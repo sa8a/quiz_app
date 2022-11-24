@@ -12,6 +12,7 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   // インスタンスを生成（new は書かなくてよい）
+  // 変数の型：変数の型はintやchar、object等がありますが、今回はobject型（クラスを使うときの型）のため、int等と異なり、変数の型=クラス名となります。
   QuizFunction quizFunction = QuizFunction();
 
   // スコアの配列（解答するたびに中身が追加されるようになる）
