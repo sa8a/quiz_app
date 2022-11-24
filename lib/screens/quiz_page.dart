@@ -17,7 +17,7 @@ class _QuizPageState extends State<QuizPage> {
   QuizFunction quizFunction = QuizFunction();
 
   // スコアの配列（解答するたびに中身が追加されるようになる）
-  List<Icon> quizScore = [];
+  List<Container> quizScore = [];
 
   void _checkedAnswer(bool getAnswer) {
     // ボタン押した時のboolを取得できたか確認
@@ -46,17 +46,31 @@ class _QuizPageState extends State<QuizPage> {
         if (getAnswer == corrctAnswer) {
           // print('正解');
           quizScore.add(
-            const Icon(
-              Icons.check,
-              color: Colors.green,
+            Container(
+              child: Row(
+                children: [
+                  Text('問${(quizScore.length + 1).toString()}'),
+                  const Icon(
+                    Icons.check,
+                    color: Colors.green,
+                  ),
+                ],
+              ),
             ),
           );
         } else {
           // print('不正解');
           quizScore.add(
-            const Icon(
-              Icons.close,
-              color: Colors.red,
+            Container(
+              child: Row(
+                children: [
+                  Text('問${(quizScore.length + 1).toString()}'),
+                  const Icon(
+                    Icons.close,
+                    color: Colors.red,
+                  ),
+                ],
+              ),
             ),
           );
         }
