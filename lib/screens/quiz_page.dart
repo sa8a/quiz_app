@@ -33,12 +33,14 @@ class _QuizPageState extends State<QuizPage> {
         // クイズ内容を最初に戻す
         quizFunction.resetQuestion();
 
-        // 解答の配列を初期化
-        quizScore = [];
-
         // 結果画面に遷移
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ResultPage()));
+            context,
+            MaterialPageRoute(
+                builder: (context) => ResultPage(result: quizScore)));
+
+        // 解答の配列を初期化
+        // quizScore = [];
       } else {
         // クイズが残っている場合
 

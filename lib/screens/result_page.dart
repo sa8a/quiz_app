@@ -3,7 +3,9 @@ import 'package:quiz_app/constants/styles.dart';
 import 'package:quiz_app/screens/start_page.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({super.key});
+  final List<Container> result;
+
+  const ResultPage({super.key, required this.result});
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +24,10 @@ class ResultPage extends StatelessWidget {
               '結果を表示',
               textAlign: TextAlign.center,
               style: textStyle,
+            ),
+            const SizedBox(height: 30),
+            Row(
+              children: result,
             ),
             const SizedBox(height: 30),
             SizedBox(
